@@ -1,0 +1,32 @@
+/* WIDGET: TAG CLOUD
+-------------------------------------------- */
+
+.vlt-widget.widget_tag_cloud {
+
+	.tagcloud {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	a {
+		display: inline-flex;
+		padding: px2rem(2px) px2rem(8px);
+		margin: 0 px2rem(6px) px2rem(6px) 0;
+		color: map-get($colors, 'c3');
+		font-size: px2rem(12px);
+		font-weight: 600;
+		line-height: 1.8;
+		text-transform: uppercase;
+		border-radius: px2rem(4px);
+		background-color: map-get($colors, 'c4');
+		box-shadow: inset 0px -2px 0px 0px rgba(map-get($colors, 'c1'), 0.1);
+
+		&:hover {
+			color: map-get($colors, 'c0');
+			background-color: map-get($colors, 'p1');
+		}
+
+	}
+
+}

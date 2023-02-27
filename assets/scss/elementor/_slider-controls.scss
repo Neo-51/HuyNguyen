@@ -1,0 +1,51 @@
+/* WIDGET: SLIDER CONTROLS
+-------------------------------------------- */
+
+.vlt-slider-controls {
+	display: inline-flex;
+	align-items: center;
+	font-size: px2rem(20px);
+	font-weight: 600;
+	letter-spacing: -.01em;
+	line-height: 1;
+	color: map-get($colors, 'c1');
+
+	.pagination {
+		justify-content: center;
+		margin: 0 px2rem(15px);
+		min-width: px2rem(60px);
+		color: inherit !important;
+
+		.sep {
+			margin: 0 px2rem(8px);
+		}
+
+	}
+
+	.prev {
+		margin-right: px2rem(8px);
+	}
+
+	.next {
+		margin-left: px2rem(8px);
+	}
+
+	.prev,
+	.next {
+		transition: color 300ms $transition;
+		cursor: pointer;
+		outline: none;
+
+		svg {
+			height: 1em;
+			width: auto;
+			margin-top: -2pt;
+		}
+
+		&:hover {
+			color: rgba(map-get($colors, 'c1'), .8);
+		}
+
+	}
+
+}

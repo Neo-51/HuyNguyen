@@ -1,0 +1,42 @@
+/* WIDGET: CATEGORIES
+-------------------------------------------- */
+
+.vlt-widget.widget_categories {
+
+	li::before {
+		content: '';
+		display: inline-block;
+		height: 2px;
+		width: 15px;
+		margin-top: -2px;
+		margin-right: 10px;
+		color: map-get($colors, 'p1');
+		background-color: currentColor;
+		vertical-align: middle;
+		transition: width 300ms $transition;
+	}
+
+	li:hover::before {
+		width: 10px;
+	}
+
+	li+li,
+	ul.children {
+		margin-top: 10px;
+	}
+
+	a {
+		margin-right: 4px;
+
+		&:not(:hover) {
+			color: map-get($colors, 'c7');
+
+			.vlt-is--dark-scheme & {
+				color: map-get($colors, 'c4');
+			}
+
+		}
+
+	}
+
+}

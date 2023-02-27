@@ -1,0 +1,24 @@
+/* WIDGET: CALENDAR
+-------------------------------------------- */
+
+.vlt-widget.widget_calendar {
+
+	tr,
+	td,
+	th {
+		padding: px2rem(6px) px2rem(5px);
+		text-align: center;
+	}
+
+	caption {
+		padding: px2rem(15px) 0 0;
+		color: map-get($colors, 'c1');
+	}
+
+	#today {
+		color: map-get($colors, 'c0');
+		font-weight: 600;
+		background-color: map-get($colors, 'p1');
+	}
+
+}

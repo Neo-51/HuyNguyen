@@ -1,0 +1,67 @@
+/* POST: SINGLE POST
+-------------------------------------------- */
+
+.vlt-post--style-single {
+	padding-top: px2rem(240px);
+	padding-bottom: px2rem(120px);
+
+	.vlt-post-header+.vlt-post-thumbnail,
+	.vlt-post-thumbnail+.vlt-post-content,
+	.vlt-post-header+.vlt-post-content {
+		margin-top: px2rem(50px);
+	}
+
+	.vlt-post-header {
+
+		.vlt-post-title {
+
+			@include mq('medium') {
+				font-size: px2rem(32px);
+				line-height: 1.4;
+			}
+
+		}
+
+		.vlt-post-meta {
+			margin-top: px2rem(20px);
+		}
+
+	}
+
+	.vlt-post-footer {
+		margin-top: px2rem(80px);
+
+		.vlt-post-tags h5,
+		.vlt-social-share h5 {
+			margin: 0 0 px2rem(15px);
+		}
+
+		.vlt-post-tags {
+			@extend .vlt-widget.widget_tag_cloud;
+		}
+
+		.vlt-social-share {
+
+			a {
+				@extend %vlt_display_2;
+				color: map-get($colors, 'c1');
+			}
+
+			a+a {
+				margin-left: px2rem(20px);
+			}
+
+			a:hover {
+				color: inherit;
+				opacity: 0.8;
+			}
+
+		}
+
+		.vlt-post-tags+.vlt-social-share {
+			margin-top: px2rem(40px);
+		}
+
+	}
+
+}

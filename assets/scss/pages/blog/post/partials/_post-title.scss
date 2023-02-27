@@ -1,0 +1,21 @@
+/* PARTIAL: POST TITLE
+-------------------------------------------- */
+
+.vlt-post-title {
+	margin: 0;
+
+	svg {
+		height: 1em;
+		width: 1em;
+		margin-right: px2rem(5px);
+	}
+
+	a {
+
+		&:hover {
+			text-decoration: none;
+		}
+
+	}
+
+}

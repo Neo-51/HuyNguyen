@@ -1,0 +1,58 @@
+/* LAYOUT: FOOTER
+-------------------------------------------- */
+
+.vlt-footer {
+	width: 100%;
+
+	&--fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: z('fixed-footer');
+	}
+
+}
+
+/* FOOTER DEFAULT
+-------------------------------------------- */
+
+.vlt-footer--default {
+	padding: 0 px2rem(15px) px2rem(15px);
+	pointer-events: none;
+
+	@include mq('medium', min) {
+		padding: 0 px2rem(30px) px2rem(30px);
+	}
+
+	@include mq('xlarge', min) {
+		padding: 0 px2rem(60px) px2rem(40px);
+	}
+
+	@include mq('small') {
+		display: none;
+	}
+
+	@media (max-height: 559px) {
+		display: none;
+	}
+
+}
+
+/* FOOTER COPYRIGHT
+-------------------------------------------- */
+
+.vlt-footer-copyright {
+	@extend %vlt_display_1;
+	color: map-get($colors, 'c1');
+	pointer-events: auto;
+
+	.is-light & {
+		color: map-get($colors, 'c0');
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+}

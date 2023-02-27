@@ -1,0 +1,15 @@
+/* PARTIAL: POST META
+-------------------------------------------- */
+
+.vlt-post-meta {
+	font-size: px2rem(14px);
+	color: rgba(map-get($colors, 'c1'), .8);
+	font-weight: 500;
+
+	span+span::before {
+		content: '/';
+		margin-right: px2rem(6px);
+		margin-left: px2rem(6px);
+	}
+
+}

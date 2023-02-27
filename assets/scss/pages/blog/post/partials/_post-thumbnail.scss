@@ -1,0 +1,58 @@
+/* PARTIAL: POST THUMBNAIL
+-------------------------------------------- */
+
+.vlt-post-thumbnail {
+	position: relative;
+	width: 100%;
+	border-radius: px2rem(8px);
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	overflow: hidden;
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		backface-visibility: hidden;
+		will-change: transform;
+		transform: scale(1) translateZ(0);
+		transition: transform 1s $transition;
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: px2rem(45px);
+		width: px2rem(45px);
+		font-size: px2rem(20px);
+		color: map-get($colors, 'c0');
+		border-radius: 0;
+		border-bottom-left-radius: px2rem(8px);
+		background-color: map-get($colors, 'c1');
+		pointer-events: none;
+		z-index: 2;
+
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+
+	}
+
+}
+
+.vlt-post:hover .vlt-post-thumbnail img {
+	transform: scale(1.05) translateZ(0);
+}

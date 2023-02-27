@@ -1,0 +1,109 @@
+/* WORDPRESS: PAGINATION
+-------------------------------------------- */
+
+.vlt-pagination {
+	display: block;
+	margin-top: px2rem(100px);
+	text-align: center;
+}
+
+/* PAGED
+-------------------------------------------- */
+
+.vlt-pagination--paged {
+	display: flex;
+	justify-content: space-between;
+
+	.prev,
+	.next {
+		display: inline-flex;
+		color: map-get($colors, 'c1');
+		font-weight: 500;
+		line-height: 1;
+
+		svg {
+			height: px2rem(16px);
+			width: auto;
+			transition: transform 300ms $transition;
+		}
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.prev span {
+		margin-left: px2rem(25px);
+	}
+
+	.next span {
+		margin-right: px2rem(25px);
+	}
+
+	.prev:hover svg {
+		transform: translate3d(6px, 0, 0);
+	}
+
+	.next:hover svg {
+		transform: translate3d(-6px, 0, 0);
+	}
+
+}
+
+/* NUMERIC
+-------------------------------------------- */
+
+.vlt-pagination--numeric {
+
+	ul {
+		display: inline-flex;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	li>a,
+	li>span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 px2rem(10px);
+		color: map-get($colors, 'c1');
+		font-size: px2rem(18px);
+
+		svg {
+			height: px2rem(16px);
+			width: auto;
+			margin-top: 1pt;
+			transition: transform 300ms $transition;
+		}
+
+		&.current,
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+		&.prev {
+			margin-right: px2rem(25px);
+
+			&:hover svg {
+				transform: translateX(-6px);
+			}
+
+		}
+
+		&.next {
+			margin-left: px2rem(25px);
+
+			&:hover svg {
+				transform: translateX(6px);
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,33 @@
+/* WIDGET: SEARCH FORM
+-------------------------------------------- */
+
+.vlt-search-form {
+	position: relative;
+
+	input[type="text"] {
+		padding-right: px2rem(45px);
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: 0;
+		padding: 0 px2rem(15px);
+		font-size: px2rem(20px);
+		color: inherit;
+		border: none;
+		background: none;
+		cursor: pointer;
+
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+
+	}
+
+}

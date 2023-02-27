@@ -1,0 +1,37 @@
+/* PAGE: PORTFOLIO
+-------------------------------------------- */
+
+:root {
+	// Main colors.
+	--vp-color-brand: #c3323a;
+	--vp-color-gray: #5c5c5c;
+	--vp-color-gray-darken: #101010;
+	--vp-color-gray-light: #ccc;
+}
+
+.vp-portfolio {
+	--vp-elements__gap: 70px;
+}
+
+.vp-portfolio__items-style-default {
+	--vp-items-style-default--meta-items__gap: 15px;
+}
+
+.vp-portfolio__items-style-emerge .vp-portfolio__item-overlay::before {
+	display: none;
+}
+
+.vp-portfolio__items-style-default .vp-portfolio__item-meta-categories .vp-portfolio__item-meta-category a,
+.vp-portfolio__items-style-fade .vp-portfolio__item-meta-categories .vp-portfolio__item-meta-category span,
+.vp-portfolio__items-style-fly .vp-portfolio__item-meta-categories .vp-portfolio__item-meta-category span,
+.vp-portfolio__items-style-emerge .vp-portfolio__item-meta-categories .vp-portfolio__item-meta-category a {
+	@extend %vlt_display_1;
+}
+
+// import
+
+@import 'work/partials/work-thumbnail',
+'work/partials/work-title',
+'work/partials/work-meta';
+
+@import 'work/masonry';
